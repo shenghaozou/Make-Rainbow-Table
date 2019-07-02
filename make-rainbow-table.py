@@ -90,6 +90,7 @@ def iterate_wordlist(word_list_name, db_rainbow):
     hash_type = options.hash_type
     file_word_list = open(word_list_name, 'r')
     for word in file_word_list:
+        word = word.strip()
         if hash_type == 'all':
             for t in hash_types:
                 word_hashed = hash_word(word, t)
